@@ -20,6 +20,9 @@ app.post('/projects', (request, response) => {
 });
 
 app.put('/projects/:id', (request, response) => {
+  const { id } = request.params;
+  console.log(id);
+
   return response.json([
     'Projeto 4',
     'Projeto 2',
