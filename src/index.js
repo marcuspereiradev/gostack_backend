@@ -13,9 +13,7 @@ function logRequests(request, response, next) {
   return next();
 }
 
-app.use(logRequests)
-
-app.get('/projects', (request, response) => {
+app.get('/projects', logRequests, (request, response) => {
   const { title } = request.query;
 
   const result = title
